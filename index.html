@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joker's Last Call — Official Site &amp; Press Kit</title>
+<meta name="description" content="A dark casino roguelike built on One Card, the fast and aggressive Korean card game. Outplay two rivals at once and reverse a deadly attack chain with a single Joker. Coming to Steam November 5, 2026.">
+<meta property="og:title" content="Joker's Last Call">
+<meta property="og:description" content="Korea's One Card, reborn as a roguelike. Stack the attack. Break the chain. Beat the house.">
+<meta property="og:image" content="assets/web/capsule.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo/icon_256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;1,6..96,400&family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#080605;
+  --void-2:#0e0b09;
+  --felt:#10241c;
+  --felt-2:#163024;
+  --gilt:#d9b168;
+  --gilt-hi:#f2dca8;
+  --gilt-dim:rgba(217,177,104,.32);
+  --blood:#a31621;
+  --blood-hi:#d8323f;
+  --bone:#e8dfcb;
+  --ash:#8a8072;
+  --rule:rgba(217,177,104,.18);
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--void);color:var(--bone);
+  font-family:'Barlow',system-ui,sans-serif;font-weight:300;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--gilt);text-decoration:none;border-bottom:1px solid var(--gilt-dim)}
+a:hover{color:var(--gilt-hi);border-bottom-color:var(--gilt)}
+:focus-visible{outline:2px solid var(--gilt-hi);outline-offset:3px}
+
+/* ---------- i18n ---------- */
+[data-lang="en"] .ko,[data-lang="ko"] .en{display:none !important}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:600;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.12}
+h3{font-size:21px;line-height:1.25}
+.eyebrow{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.34em;font-size:12px;color:var(--gilt);
+  display:flex;align-items:center;gap:14px;margin:0 0 14px;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+.pip{color:var(--gilt);font-size:14px;line-height:1}
+.lead{font-size:19px;color:#cdc4b2}
+.muted{color:var(--ash);font-size:15px}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:74px 0;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(8,6,5,.9);backdrop-filter:blur(9px);
+  border-bottom:1px solid var(--rule);
+}
+nav .wrap{display:flex;align-items:center;gap:20px;height:52px}
+nav .brand{
+  font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:.06em;
+  color:var(--bone);border:0;white-space:nowrap;
+}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex:1;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav a{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  letter-spacing:.16em;font-size:12px;font-weight:500;color:var(--ash);border:0;white-space:nowrap;
+}
+nav a:hover{color:var(--gilt-hi)}
+.langbtn{
+  font-family:'Barlow Condensed',sans-serif;letter-spacing:.14em;font-size:11px;font-weight:600;
+  background:transparent;color:var(--gilt);border:1px solid var(--gilt-dim);
+  padding:5px 11px;cursor:pointer;text-transform:uppercase;
+}
+.langbtn:hover{border-color:var(--gilt);color:var(--gilt-hi)}
+
+/* ---------- hero ---------- */
+header.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;overflow:hidden}
+header.hero .bg{position:absolute;inset:0}
+header.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.72}
+header.hero .bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 50% 42%, transparent 8%, rgba(8,6,5,.55) 62%, var(--void) 100%),
+    linear-gradient(to top, var(--void) 4%, rgba(8,6,5,.15) 46%);
+}
+header.hero .inner{position:relative;width:100%;padding-bottom:52px}
+.hero-logo{max-width:520px;width:76%;margin:0 0 20px}
+.hero-hook{
+  font-family:'Bodoni Moda',serif;font-size:clamp(20px,2.9vw,29px);font-weight:400;
+  font-style:italic;color:var(--gilt-hi);margin:0 0 6px;
+}
+.hero-sub{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  letter-spacing:.3em;font-size:13px;color:var(--bone);margin:0 0 28px;
+}
+.rail{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.18em;
+  font-size:13px;font-weight:600;padding:13px 24px;border:1px solid var(--gilt);
+  color:var(--gilt-hi);background:rgba(8,6,5,.5);cursor:pointer;display:inline-block;
+  transition:background .18s ease,color .18s ease;
+}
+.btn:hover{background:var(--gilt);color:var(--void);border-color:var(--gilt)}
+.btn.primary{background:var(--blood);border-color:var(--blood-hi);color:#fff}
+.btn.primary:hover{background:var(--blood-hi);color:#fff}
+
+/* ---------- fact strip ---------- */
+.strip{background:var(--void-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;padding:0 24px}
+.strip div{padding:20px 4px}
+.strip dt{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.2em;
+  font-size:11px;color:var(--ash);margin-bottom:5px;
+}
+.strip dd{margin:0;font-family:'Bodoni Moda',serif;font-size:19px;color:var(--gilt-hi)}
+.strip dd small{font-family:'Barlow',sans-serif;font-size:13px;color:var(--ash);display:block;font-weight:300}
+
+/* ---------- gilt frame (signature) ---------- */
+.frame{position:relative;border:1px solid var(--gilt-dim);padding:7px;background:#0b0908}
+.frame > *{display:block;width:100%}
+.frame::before{content:"";position:absolute;inset:3px;border:1px solid rgba(217,177,104,.14);pointer-events:none;z-index:2}
+.frame::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:3;
+  background:
+   radial-gradient(circle 2.5px at 9px 9px, var(--gilt) 98%, transparent 100%),
+   radial-gradient(circle 2.5px at calc(100% - 9px) 9px, var(--gilt) 98%, transparent 100%),
+   radial-gradient(circle 2.5px at 9px calc(100% - 9px), var(--gilt) 98%, transparent 100%),
+   radial-gradient(circle 2.5px at calc(100% - 9px) calc(100% - 9px), var(--gilt) 98%, transparent 100%);
+}
+
+/* ---------- features ---------- */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:30px;margin-top:42px}
+.features h3{color:var(--gilt-hi);margin-bottom:8px}
+.features .n{
+  font-family:'Barlow Condensed',sans-serif;letter-spacing:.24em;font-size:11px;
+  color:var(--blood-hi);text-transform:uppercase;display:block;margin-bottom:9px;
+}
+.features p{margin:0;font-size:16px;color:#c6bdac}
+
+/* ---------- motion ---------- */
+.moments{display:grid;gap:44px;margin-top:40px}
+.moment{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:820px){
+  .moment{grid-template-columns:1.55fr 1fr;align-items:center;gap:34px}
+  .moment:nth-child(even){grid-template-columns:1fr 1.55fr}
+  .moment:nth-child(even) .frame{order:2}
+  .moment:nth-child(even) .mtext{order:1}
+}
+.mtext h3{color:var(--gilt-hi);margin-bottom:7px}
+.mtext p{margin:0 0 10px;font-size:16px;color:#c6bdac}
+.mtext .dl{font-family:'Barlow Condensed',sans-serif;letter-spacing:.14em;font-size:11px;text-transform:uppercase}
+
+/* ---------- screenshots ---------- */
+.tabs{display:flex;gap:8px;margin:26px 0 20px;flex-wrap:wrap}
+.tab{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.18em;
+  font-size:12px;font-weight:600;padding:8px 17px;border:1px solid var(--gilt-dim);
+  background:transparent;color:var(--ash);cursor:pointer;
+}
+.tab[aria-selected="true"]{border-color:var(--gilt);color:var(--void);background:var(--gilt)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px}
+.grid[hidden]{display:none}
+.grid a{border:0;display:block}
+
+/* ---------- developer ---------- */
+.dev{display:grid;gap:34px;align-items:start;margin-top:36px}
+@media(min-width:760px){.dev{grid-template-columns:250px 1fr;gap:44px}}
+.dev .photo{background:#f3f1ee}
+.shipped{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid var(--rule)}
+.shipped li{
+  display:flex;justify-content:space-between;gap:16px;padding:10px 0;
+  border-bottom:1px solid var(--rule);font-size:15px;
+}
+.shipped span{color:var(--ash);font-family:'Barlow Condensed',sans-serif;letter-spacing:.1em;font-size:13px;text-transform:uppercase;white-space:nowrap}
+
+/* ---------- press divider ---------- */
+.divider{
+  background:linear-gradient(180deg,var(--felt) 0%,#0c1c16 100%);
+  border-top:1px solid var(--gilt-dim);border-bottom:1px solid var(--gilt-dim);
+  padding:52px 0;text-align:center;
+}
+.divider .eyebrow::after{display:none}
+.divider .eyebrow{justify-content:center}
+.divider h2{color:var(--gilt-hi);font-size:clamp(26px,3.6vw,38px)}
+.divider p{margin:10px auto 0;max-width:620px;color:#b9b0a0}
+
+/* ---------- downloads ---------- */
+.dls{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:34px}
+.dl-card{
+  border:1px solid var(--gilt-dim);padding:20px;background:var(--void-2);
+  display:flex;flex-direction:column;gap:6px;
+}
+.dl-card:hover{border-color:var(--gilt)}
+.dl-card .t{font-family:'Bodoni Moda',serif;font-size:18px;color:var(--gilt-hi)}
+.dl-card .s{font-family:'Barlow Condensed',sans-serif;letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:var(--ash)}
+
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;margin-top:26px;font-size:16px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.18em;
+  font-size:11px;color:var(--ash);font-weight:600;width:38%;white-space:nowrap;
+}
+td{color:#d5ccba}
+
+/* ---------- copy blocks ---------- */
+.copyblock{border:1px solid var(--rule);background:var(--void-2);padding:20px;margin-top:16px;position:relative}
+.copyblock .lbl{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.2em;
+  font-size:11px;color:var(--gilt);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.copybtn{
+  font-family:'Barlow Condensed',sans-serif;letter-spacing:.14em;font-size:10px;text-transform:uppercase;
+  background:transparent;border:1px solid var(--gilt-dim);color:var(--gilt);padding:4px 10px;cursor:pointer;
+}
+.copybtn:hover{border-color:var(--gilt);color:var(--gilt-hi)}
+.copyblock p{margin:0;font-size:16px;color:#d5ccba}
+.copyblock .ct{white-space:pre-line}
+.copyblock p + p{margin-top:12px}
+
+/* ---------- notice ---------- */
+.notice{border-left:2px solid var(--gilt);padding:4px 0 4px 20px;margin-top:22px}
+.notice p{margin:0 0 10px;font-size:16px;color:#c6bdac}
+.notice p:last-child{margin-bottom:0}
+
+/* ---------- video ---------- */
+.video{position:relative;padding-top:56.25%;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- contact ---------- */
+.links{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.links li{border-bottom:1px solid var(--rule);padding-bottom:10px}
+.links .k{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.18em;
+  font-size:11px;color:var(--ash);display:block;margin-bottom:3px;
+}
+
+footer{padding:44px 0 60px;border-top:1px solid var(--rule);color:var(--ash);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+
+@media(max-width:700px){
+  .strip .wrap{grid-template-columns:repeat(2,1fr)}
+  section{padding:56px 0}
+  body{font-size:16px}
+  header.hero{min-height:74vh}
+  header.hero .bg img{object-position:50% 34%}
+  header.hero .inner{padding-bottom:38px}
+  .hero-logo{width:90%;margin-bottom:16px}
+  .hero-hook{font-size:21px}
+  .hero-sub{letter-spacing:.16em;font-size:11px;margin-bottom:22px}
+  .rail{gap:9px}
+  .btn{flex:1 1 100%;text-align:center;padding:14px 18px}
+  .moment .frame{margin-bottom:2px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+<body data-lang="en">
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Joker's Last Call</a>
+    <ul>
+      <li><a href="#game"><span class="en">The Game</span><span class="ko">게임 소개</span></a></li>
+      <li><a href="#media"><span class="en">In Motion</span><span class="ko">플레이 영상</span></a></li>
+      <li><a href="#shots"><span class="en">Screenshots</span><span class="ko">스크린샷</span></a></li>
+      <li><a href="#dev"><span class="en">Developer</span><span class="ko">개발자</span></a></li>
+      <li><a href="#press"><span class="en">Press Kit</span><span class="ko">프레스킷</span></a></li>
+    </ul>
+    <button class="langbtn" id="langbtn" type="button">한국어</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bg"><img src="assets/web/keyart.jpg" alt="Key art: a lone player faces two rivals across a green casino table, a glowing Joker card between them."></div>
+  <div class="inner wrap">
+    <img class="hero-logo" src="assets/logo/logo_1280x430.png" alt="Joker's Last Call">
+    <p class="hero-hook">
+      <span class="en">Korea's One Card. Reborn as a roguelike.</span>
+      <span class="ko">한국의 원카드, 로그라이크로 다시 태어나다.</span>
+    </p>
+    <p class="hero-sub">Stack the attack &nbsp;·&nbsp; Break the chain &nbsp;·&nbsp; Beat the house</p>
+    <div class="rail">
+      <a class="btn primary" href="https://store.steampowered.com/app/4962850/Jokers_Last_Call/" target="_blank" rel="noopener">
+        <span class="en">Wishlist on Steam</span><span class="ko">스팀 위시리스트</span>
+      </a>
+      <a class="btn" href="https://youtu.be/LAbl3kCWED8" target="_blank" rel="noopener">
+        <span class="en">Watch the trailer</span><span class="ko">트레일러 보기</span>
+      </a>
+      <a class="btn" href="#press"><span class="en">Press kit</span><span class="ko">프레스킷</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <dl class="wrap">
+    <div><dt><span class="en">Release</span><span class="ko">출시</span></dt>
+      <dd>Nov 5, 2026<small><span class="en">22:00 KST</span><span class="ko">한국시간 오후 10시</span></small></dd></div>
+    <div><dt><span class="en">Price</span><span class="ko">가격</span></dt>
+      <dd>$9.99<small><span class="en">10% off launch week</span><span class="ko">출시 첫 주 10% 할인</span></small></dd></div>
+    <div><dt><span class="en">Platform</span><span class="ko">플랫폼</span></dt>
+      <dd>Steam<small>Windows 10/11 64-bit</small></dd></div>
+    <div><dt><span class="en">Players</span><span class="ko">플레이</span></dt>
+      <dd><span class="en">Single-player</span><span class="ko">싱글플레이</span><small><span class="en">20–25 min per run</span><span class="ko">런 1회 20~25분</span></small></dd></div>
+  </dl>
+</div>
+
+<section id="game">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&spades;</span> <span class="en">The Game</span><span class="ko">게임 소개</span></p>
+    <h2><span class="en">A card game most of the world has never played</span><span class="ko">세계가 아직 해보지 못한 카드 게임</span></h2>
+
+    <div class="en">
+      <p class="lead">One Card is fast, aggressive, and played in Korean living rooms and army barracks — but almost nowhere else. Match rank or suit, stack draw penalties onto the next player, and watch the punishment grow until someone finally breaks the chain.</p>
+      <p>Joker's Last Call rebuilds that game as a dark casino roguelike. You sit down against two rivals at once. Every hand you win pays out in gold and relics that bend the rules — and every hand you lose brings the house closer to collecting.</p>
+    </div>
+    <div class="ko">
+      <p class="lead">원카드는 빠르고 공격적이다. 한국의 거실과 내무반에서는 누구나 알지만, 그 밖에서는 거의 알려지지 않았다. 숫자나 문양을 맞추고, 드로우 페널티를 다음 사람에게 떠넘기고, 누군가 사슬을 끊을 때까지 벌칙이 불어난다.</p>
+      <p>Joker's Last Call은 그 게임을 다크 카지노 로그라이크로 다시 만든 작품이다. 테이블에 앉으면 상대는 언제나 둘. 이기면 골드와 규칙을 비트는 유물이 쌓이고, 지면 하우스가 판돈을 걷어간다.</p>
+    </div>
+
+    <div class="features">
+      <div>
+        <span class="n">01 · <span class="en">Attack chain</span><span class="ko">공격 체인</span></span>
+        <h3><span class="en">Defense is a weapon</span><span class="ko">방어가 곧 공격</span></h3>
+        <p><span class="en">Attack cards don't deal damage — they build a penalty that travels around the table. Block it and it grows. Push it to the next rival and it grows again.</span><span class="ko">공격 카드는 피해를 주지 않는다. 테이블을 돌며 불어나는 벌칙을 쌓을 뿐이다. 막으면 커지고, 넘기면 또 커진다.</span></p>
+      </div>
+      <div>
+        <span class="n">02 · <span class="en">The Joker</span><span class="ko">조커</span></span>
+        <h3><span class="en">One card flips the table</span><span class="ko">한 장이 판을 뒤집는다</span></h3>
+        <p><span class="en">A Joker can stop a disaster or send the whole chain back the way it came. Spend it early and the last hand is naked. Hold it too long and the house collects first.</span><span class="ko">조커는 재앙을 멈추거나 체인 전체를 되돌려 보낸다. 일찍 쓰면 마지막 패가 비고, 너무 아끼면 하우스가 먼저 걷어간다.</span></p>
+      </div>
+      <div>
+        <span class="n">03 · <span class="en">Relics</span><span class="ko">유물</span></span>
+        <h3><span class="en">Rules you can rewrite</span><span class="ko">규칙을 다시 쓴다</span></h3>
+        <p><span class="en">Eighteen relics alter draws, suits, chains, defense and turn order. You carry three at a time, so every reward is also a decision about what to throw away.</span><span class="ko">18종의 유물이 드로우·문양·체인·방어·턴 순서를 바꾼다. 동시에 지닐 수 있는 건 세 개뿐이라, 보상은 언제나 무엇을 버릴지에 대한 결정이 된다.</span></p>
+      </div>
+      <div>
+        <span class="n">04 · <span class="en">1 vs 2</span><span class="ko">1 대 2</span></span>
+        <h3><span class="en">Two rivals, one seat</span><span class="ko">상대는 언제나 둘</span></h3>
+        <p><span class="en">Every fight is three-way. Rivals attack each other, exploit weak hands, and punish whoever loses control of the table. The safe move now often builds the turn that kills you.</span><span class="ko">모든 전투는 3자 대결이다. 적들은 서로를 공격하고, 약한 패를 노리고, 테이블을 놓친 쪽을 응징한다. 지금 안전한 수가 다음 턴의 사형 선고가 된다.</span></p>
+      </div>
+      <div>
+        <span class="n">05 · <span class="en">The house</span><span class="ko">하우스</span></span>
+        <h3><span class="en">Bosses that cheat on purpose</span><span class="ko">대놓고 속임수를 쓰는 보스</span></h3>
+        <p><span class="en">Climb a branching casino map through shops, events and elites, then face boss pairs who each break a different rule — and cover for each other while doing it.</span><span class="ko">상점·이벤트·엘리트로 갈라지는 카지노 맵을 오르면, 서로 다른 규칙을 부수며 엄호까지 해주는 보스 2인조가 기다린다.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trailer">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&hearts;</span> <span class="en">Trailer</span><span class="ko">트레일러</span></p>
+    <div class="frame">
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/LAbl3kCWED8" title="Joker's Last Call — Trailer" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&diams;</span> <span class="en">In Motion</span><span class="ko">플레이 영상</span></p>
+    <h2><span class="en">Four moments that explain the game</span><span class="ko">이 게임을 설명하는 네 장면</span></h2>
+    <p class="muted" style="margin-top:12px">
+      <span class="en">Every clip below is available as a looping MP4 and a GIF. Right-click to save, or take the whole set from the press kit.</span>
+      <span class="ko">아래 모든 장면은 루프 MP4와 GIF로 제공된다. 우클릭으로 저장하거나 프레스킷에서 전체 세트를 받을 수 있다.</span>
+    </p>
+
+    <div class="moments">
+
+      <div class="moment">
+        <div class="frame"><img src="assets/motion/01_attack_chain.gif" alt="The attack chain climbs from +3 to +16 as the screen floods red." loading="lazy"></div>
+        <div class="mtext">
+          <h3><span class="en">The chain climbs to +16</span><span class="ko">체인이 +16까지 오른다</span></h3>
+          <p><span class="en">Nobody has taken damage yet. Every block has made the penalty bigger. Whoever fails to answer draws all sixteen cards.</span><span class="ko">아직 아무도 피해를 입지 않았다. 막을 때마다 벌칙만 커졌을 뿐이다. 답하지 못하는 쪽이 열여섯 장을 전부 가져간다.</span></p>
+          <p class="dl"><a href="assets/motion/01_attack_chain.mp4">MP4</a> &nbsp;/&nbsp; <a href="assets/motion/01_attack_chain.gif">GIF</a></p>
+        </div>
+      </div>
+
+      <div class="moment">
+        <div class="frame"><img src="assets/motion/02_joker_reversal.gif" alt="A Joker reverses the accumulated attack chain back onto the rivals." loading="lazy"></div>
+        <div class="mtext">
+          <h3><span class="en">Reversed — debt paid</span><span class="ko">반사 — 빚을 갚다</span></h3>
+          <p><span class="en">The Joker doesn't block the chain. It turns the chain around. Eight cards that were about to land in your hand land in someone else's.</span><span class="ko">조커는 체인을 막지 않는다. 방향을 되돌린다. 내 패에 꽂힐 뻔한 여덟 장이 상대 손으로 간다.</span></p>
+          <p class="dl"><a href="assets/motion/02_joker_reversal.mp4">MP4</a> &nbsp;/&nbsp; <a href="assets/motion/02_joker_reversal.gif">GIF</a></p>
+        </div>
+      </div>
+
+      <div class="moment">
+        <div class="frame"><img src="assets/motion/03_last_call.gif" alt="A player declares Last Call with one card remaining and wins the round." loading="lazy"></div>
+        <div class="mtext">
+          <h3><span class="en">Last Call</span><span class="ko">라스트 콜</span></h3>
+          <p><span class="en">One card left. You have half a second to call it out loud. Miss the window and the table adds a card to your hand instead.</span><span class="ko">남은 건 한 장. 0.5초 안에 선언해야 한다. 놓치면 테이블이 카드를 한 장 얹어준다.</span></p>
+          <p class="dl"><a href="assets/motion/03_last_call.mp4">MP4</a> &nbsp;/&nbsp; <a href="assets/motion/03_last_call.gif">GIF</a></p>
+        </div>
+      </div>
+
+      <div class="moment">
+        <div class="frame"><img src="assets/motion/04_rule_break.gif" alt="A boss ability adds an extra attack card mid-turn, forcing a five-card draw." loading="lazy"></div>
+        <div class="mtext">
+          <h3><span class="en">The house adds a card</span><span class="ko">하우스가 한 장을 더 얹는다</span></h3>
+          <p><span class="en">Some opponents don't play by the deck. This one puts an attack card into its own hand every turn — and its partner makes sure it lands.</span><span class="ko">덱대로 놀지 않는 상대도 있다. 이쪽은 매 턴 자기 패에 공격 카드를 하나씩 더 넣고, 파트너가 그걸 꽂히게 만든다.</span></p>
+          <p class="dl"><a href="assets/motion/04_rule_break.mp4">MP4</a> &nbsp;/&nbsp; <a href="assets/motion/04_rule_break.gif">GIF</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="shots">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&clubs;</span> <span class="en">Screenshots</span><span class="ko">스크린샷</span></p>
+    <h2><span class="en">Screenshots</span><span class="ko">스크린샷</span></h2>
+    <p class="muted" style="margin-top:12px">
+      <span class="en">Click any image for the full 1920×1080 PNG. All three interface languages are included in the press kit.</span>
+      <span class="ko">이미지를 클릭하면 1920×1080 원본 PNG로 연결된다. 3개 인터페이스 언어 전부 프레스킷에 포함되어 있다.</span>
+    </p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true"  data-t="en">English</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="ko">한국어</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="zh">简体中文</button>
+    </div>
+
+    <div class="grid" id="g-en">
+      <a class="frame" href="assets/shots/en/01_battle_en.png"><img src="assets/web/en_01.jpg" alt="A three-way card battle on the green table" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/02_attack_chain_en.png"><img src="assets/web/en_02.jpg" alt="The attack chain reaches +16" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/03_joker_reversal_en.png"><img src="assets/web/en_03.jpg" alt="A Joker reverses the chain" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/04_last_call_en.png"><img src="assets/web/en_04.jpg" alt="Last Call declaration window" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/05_boss_battle_en.png"><img src="assets/web/en_05.jpg" alt="Boss battle against a pair of opponents" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/06_rule_break_en.png"><img src="assets/web/en_06.jpg" alt="A boss adds an attack card mid-turn" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/07_map_en.png"><img src="assets/web/en_07.jpg" alt="Branching casino map with six stages" loading="lazy"></a>
+      <a class="frame" href="assets/shots/en/08_round_clear_en.png"><img src="assets/web/en_08.jpg" alt="Round clear screen with relic reward" loading="lazy"></a>
+    </div>
+
+    <div class="grid" id="g-ko" hidden>
+      <a class="frame" href="assets/shots/ko/01_map_koreana.png"><img src="assets/web/ko_01.jpg" alt="맵 화면" loading="lazy"></a>
+      <a class="frame" href="assets/shots/ko/02_attack_joker_koreana.png"><img src="assets/web/ko_02.jpg" alt="조커 공격" loading="lazy"></a>
+      <a class="frame" href="assets/shots/ko/03_live_battle_koreana.png"><img src="assets/web/ko_03.jpg" alt="전투 화면" loading="lazy"></a>
+      <a class="frame" href="assets/shots/ko/04_one_card_koreana.png"><img src="assets/web/ko_04.jpg" alt="원카드 선언" loading="lazy"></a>
+      <a class="frame" href="assets/shots/ko/05_boss_fight_koreana.png"><img src="assets/web/ko_05.jpg" alt="보스전" loading="lazy"></a>
+    </div>
+
+    <div class="grid" id="g-zh" hidden>
+      <a class="frame" href="assets/shots/zh/01_map_schinese.png"><img src="assets/web/zh_01.jpg" alt="Map screen, Simplified Chinese" loading="lazy"></a>
+      <a class="frame" href="assets/shots/zh/02_attack_joker_schinese.png"><img src="assets/web/zh_02.jpg" alt="Joker attack, Simplified Chinese" loading="lazy"></a>
+      <a class="frame" href="assets/shots/zh/03_live_battle_schinese.png"><img src="assets/web/zh_03.jpg" alt="Battle, Simplified Chinese" loading="lazy"></a>
+      <a class="frame" href="assets/shots/zh/04_one_card_schinese.png"><img src="assets/web/zh_04.jpg" alt="One Card declaration, Simplified Chinese" loading="lazy"></a>
+      <a class="frame" href="assets/shots/zh/05_boss_fight_schinese.png"><img src="assets/web/zh_05.jpg" alt="Boss fight, Simplified Chinese" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="dev">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&spades;</span> <span class="en">The Developer</span><span class="ko">개발자</span></p>
+    <h2><span class="en">An eye doctor who makes card games at midnight</span><span class="ko">자정에 카드 게임을 만드는 안과의사</span></h2>
+
+    <div class="dev">
+      <div class="frame photo"><img src="assets/web/dev.jpg" alt="Byoungyoung Gu, developer of Joker's Last Call" loading="lazy"></div>
+      <div>
+        <div class="en">
+          <p class="lead">Byoungyoung Gu is a practising ophthalmologist in South Korea and the CEO of Gana Holdings Co., Ltd. He has been shipping software since 2016, written around clinic hours.</p>
+          <p>His earlier apps came out of the day job: a home eye-check tool built on the anterior segment photography principles he uses at work, and a breathing exercise app made with a psychiatrist's review. Then the games started — a Three Kingdoms strategy title, a zombie survival game, and in April 2026 a mobile release, Three Kingdoms: Storm of War.</p>
+          <p>Joker's Last Call is his first game on Steam. It began with a card game he grew up playing, and a question nobody had answered: why has nobody built a roguelike out of One Card?</p>
+        </div>
+        <div class="ko">
+          <p class="lead">구병영은 한국에서 진료 중인 안과 전문의이자 주식회사 가나홀딩스 대표다. 2016년부터 진료 시간 사이사이에 소프트웨어를 만들어 왔다.</p>
+          <p>초기 앱들은 본업에서 나왔다. 전안부 촬영 원리를 응용한 홈 안과 검사 도구, 정신과 전문의 감수를 받은 심호흡 앱 같은 것들이다. 그 뒤로 게임이 시작됐다. 삼국지 전략 게임, 좀비 서바이벌, 그리고 2026년 4월 모바일로 출시한 Three Kingdoms: Storm of War.</p>
+          <p>Joker's Last Call은 그의 첫 스팀 게임이다. 어릴 때부터 하던 카드 게임에서 시작됐고, 아무도 답하지 않은 질문에서 출발했다. 왜 아직 아무도 원카드로 로그라이크를 만들지 않았을까?</p>
+        </div>
+
+        <ul class="shipped">
+          <li><a href="https://apps.apple.com/us/app/three-kingdoms-storm-of-war/id6761676722" target="_blank" rel="noopener">Three Kingdoms: Storm of War</a><span>iOS / Android · 2026</span></li>
+          <li><a href="https://apps.apple.com/us/app/eye-home-clinic/id1596090751" target="_blank" rel="noopener">EYE Home Clinic</a><span>iOS · 2021</span></li>
+          <li><a href="https://apps.apple.com/us/app/antidote-hunter/id1502831139" target="_blank" rel="noopener">Antidote Hunter</a><span>iOS · 2020</span></li>
+          <li><a href="https://apps.apple.com/us/app/3-kingdoms-allies-are-coming/id1553671068" target="_blank" rel="noopener">3 Kingdoms: Allies are Coming</a><span>iOS</span></li>
+          <li><a href="https://apps.apple.com/us/developer/byoungyoung-gu/id1185306041" target="_blank" rel="noopener"><span class="en">Full App Store catalogue</span><span class="ko">App Store 전체 목록</span></a><span>&rarr;</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" id="press">
+  <div class="wrap">
+    <p class="eyebrow" style="justify-content:center"><span class="pip">&clubs;</span> Press &amp; Creators</p>
+    <h2><span class="en">Everything you need, in one place</span><span class="ko">필요한 자료를 한 곳에</span></h2>
+    <p>
+      <span class="en">Assets are free to use in coverage. Monetisation is permitted on every platform. Review keys are available on request — write to the address at the bottom of this page.</span>
+      <span class="ko">모든 자료는 보도·영상에 자유롭게 사용할 수 있다. 모든 플랫폼에서 수익 창출이 허용된다. 리뷰 키는 요청 시 제공하며, 페이지 하단 주소로 연락하면 된다.</span>
+    </p>
+  </div>
+</div>
+
+<section id="downloads">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&diams;</span> <span class="en">Downloads</span><span class="ko">다운로드</span></p>
+    <div class="dls">
+      <a class="dl-card" href="downloads/JLC_PressKit_Full.zip">
+        <span class="t"><span class="en">Complete press kit</span><span class="ko">프레스킷 전체</span></span>
+        <span class="s">ZIP · <span class="en">everything below</span><span class="ko">아래 전부 포함</span></span>
+      </a>
+      <a class="dl-card" href="downloads/JLC_Screenshots.zip">
+        <span class="t"><span class="en">Screenshots</span><span class="ko">스크린샷</span></span>
+        <span class="s">ZIP · 18 PNG · 1920×1080 · EN/KO/ZH</span>
+      </a>
+      <a class="dl-card" href="downloads/JLC_Motion.zip">
+        <span class="t"><span class="en">Motion clips</span><span class="ko">모션 클립</span></span>
+        <span class="s">ZIP · 4 MP4 + 4 GIF · 720p</span>
+      </a>
+      <a class="dl-card" href="downloads/JLC_KeyArt_Logo.zip">
+        <span class="t"><span class="en">Key art &amp; logo</span><span class="ko">키아트 &amp; 로고</span></span>
+        <span class="s">ZIP · <span class="en">PNG with alpha, capsules, icons</span><span class="ko">알파 PNG, 캡슐, 아이콘</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&spades;</span> <span class="en">Fact Sheet</span><span class="ko">팩트 시트</span></p>
+    <table>
+      <tr><th><span class="en">Title</span><span class="ko">타이틀</span></th><td>Joker's Last Call</td></tr>
+      <tr><th><span class="en">Developer</span><span class="ko">개발</span></th><td>Byoungyoung Gu</td></tr>
+      <tr><th><span class="en">Publisher</span><span class="ko">퍼블리셔</span></th><td>Gana Holdings Co., Ltd. — <span class="en">Seoul, South Korea</span><span class="ko">대한민국</span></td></tr>
+      <tr><th><span class="en">Release date</span><span class="ko">출시일</span></th><td>November 5, 2026 · 22:00 KST</td></tr>
+      <tr><th><span class="en">Launch price</span><span class="ko">가격</span></th><td>USD 9.99 — <span class="en">10% launch discount (USD 8.99) for the first week</span><span class="ko">출시 첫 주 10% 할인 (USD 8.99)</span></td></tr>
+      <tr><th><span class="en">Platform</span><span class="ko">플랫폼</span></th><td>Steam (Windows 10/11, 64-bit)</td></tr>
+      <tr><th><span class="en">Steam App ID</span><span class="ko">스팀 App ID</span></th><td>4962850</td></tr>
+      <tr><th><span class="en">Genre</span><span class="ko">장르</span></th><td><span class="en">Roguelike · Card game · Strategy</span><span class="ko">로그라이크 · 카드 게임 · 전략</span></td></tr>
+      <tr><th><span class="en">Players</span><span class="ko">플레이 인원</span></th><td><span class="en">Single-player</span><span class="ko">싱글플레이 전용</span></td></tr>
+      <tr><th><span class="en">Run length</span><span class="ko">런 길이</span></th><td><span class="en">20–25 minutes</span><span class="ko">20~25분</span></td></tr>
+      <tr><th><span class="en">Languages</span><span class="ko">지원 언어</span></th><td><span class="en">English, Korean, Simplified Chinese — interface only (no voice-over)</span><span class="ko">영어, 한국어, 중국어 간체 — 인터페이스만 (음성 없음)</span></td></tr>
+      <tr><th><span class="en">Demo</span><span class="ko">데모</span></th><td><span class="en">Playable demo during Steam Next Fest, October 19–26, 2026</span><span class="ko">스팀 넥스트 페스트 기간 (2026년 10월 19~26일) 플레이 가능</span></td></tr>
+      <tr><th><span class="en">Engine</span><span class="ko">엔진</span></th><td>Unity 6 (URP)</td></tr>
+      <tr><th><span class="en">Team size</span><span class="ko">팀 규모</span></th><td><span class="en">One developer</span><span class="ko">1인 개발</span></td></tr>
+      <tr><th><span class="en">Minimum spec</span><span class="ko">최소 사양</span></th><td>Windows 10 64-bit · Intel Core i3 <span class="en">or equivalent</span><span class="ko">또는 동급</span> · 4 GB RAM · DirectX 11, 2 GB VRAM · 2 GB <span class="en">storage</span><span class="ko">저장공간</span></td></tr>
+      <tr><th><span class="en">Content rating</span><span class="ko">콘텐츠 등급</span></th><td><span class="en">Stylised fantasy violence in a dark casino setting. No realistic gore, no explicit content.</span><span class="ko">다크 카지노 배경의 양식화된 판타지 폭력 표현. 사실적 유혈이나 선정적 요소 없음.</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="copy">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&hearts;</span> <span class="en">Ready-to-use Copy</span><span class="ko">바로 쓰는 소개문</span></p>
+    <h2><span class="en">Three lengths, take whichever fits</span><span class="ko">세 가지 분량, 맞는 것으로</span></h2>
+
+    <div class="copyblock">
+      <div class="lbl"><span><span class="en">One line</span><span class="ko">한 줄</span></span><button class="copybtn" type="button">Copy</button></div>
+      <p class="ct">Korea's One Card, reborn as a dark casino roguelike: outplay two rivals at once and reverse a deadly attack chain with a single Joker.</p>
+    </div>
+
+    <div class="copyblock">
+      <div class="lbl"><span><span class="en">Short — 50 words</span><span class="ko">짧게 — 50단어</span></span><button class="copybtn" type="button">Copy</button></div>
+      <p class="ct">Joker's Last Call is a single-player roguelike built on One Card, a fast Korean card game rarely seen outside Korea. Every fight pits you against two rivals at once. Stack attack chains, break them with a Joker, and collect eighteen rule-bending relics on the way to the house's final table.</p>
+    </div>
+
+    <div class="copyblock">
+      <div class="lbl"><span><span class="en">Long — 200 words</span><span class="ko">길게 — 200단어</span></span><button class="copybtn" type="button">Copy</button></div>
+      <p class="ct">Joker's Last Call is a single-player card roguelike built on One Card — a fast, aggressive card game played across Korea and almost nowhere else. Match rank or suit, stack draw penalties onto the next player, and watch the punishment grow until someone finally breaks the chain.
+
+Every battle is a three-way contest: one player against two rivals who also attack each other, exploit weak hands, and punish whoever loses control of the table. Attack cards never deal damage directly. They build a chain that travels around the table, growing with each block, until the player who cannot answer draws the whole thing.
+
+A Joker can stop that chain or send it back the way it came — but you only carry so many, and the final hand is always the dangerous one.
+
+Between fights you climb a branching casino map through shops, events and elite opponents, choosing from eighteen relics that alter draws, suits, chains, defense and turn order. You can hold three at a time, so every reward is a decision about what to give up.
+
+Built by a practising ophthalmologist in Unity 6, releasing on Steam on November 5, 2026, with a playable demo during Steam Next Fest in October.</p>
+    </div>
+  </div>
+</section>
+
+<section id="permissions">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&clubs;</span> <span class="en">Permissions &amp; Disclosure</span><span class="ko">사용 허가 및 고지</span></p>
+
+    <h3 style="color:var(--gilt-hi)"><span class="en">Video &amp; streaming</span><span class="ko">영상 및 스트리밍</span></h3>
+    <div class="notice">
+      <p class="en">You are free to record, stream and monetise Joker's Last Call on any platform — Let's Plays, reviews, full playthroughs, edited content, sponsored videos. No permission is required and no revenue share is claimed. A link to the Steam page is appreciated but not required.</p>
+      <p class="en">This permission applies to the demo and the full release, and it does not expire.</p>
+      <p class="ko">Joker's Last Call은 모든 플랫폼에서 자유롭게 녹화·방송·수익 창출할 수 있다. 렛츠플레이, 리뷰, 전체 플레이, 편집 영상, 협찬 영상 모두 포함된다. 별도 허가가 필요 없고 수익 배분도 요구하지 않는다. 스팀 페이지 링크는 감사하지만 의무는 아니다.</p>
+      <p class="ko">이 허가는 데모와 정식 버전 모두에 적용되며, 만료되지 않는다.</p>
+    </div>
+
+    <h3 style="color:var(--gilt-hi);margin-top:38px"><span class="en">Press assets</span><span class="ko">보도 자료</span></h3>
+    <div class="notice">
+      <p class="en">Every screenshot, clip, logo and piece of key art on this page may be used in coverage of the game without asking. Please don't alter the logo or key art beyond cropping and scaling.</p>
+      <p class="ko">이 페이지의 모든 스크린샷·클립·로고·키아트는 게임 관련 보도에 별도 문의 없이 사용할 수 있다. 로고와 키아트는 크롭·크기 조정 외의 변형은 삼가 주기 바란다.</p>
+    </div>
+
+    <h3 style="color:var(--gilt-hi);margin-top:38px"><span class="en">AI-generated content</span><span class="ko">AI 생성 콘텐츠 고지</span></h3>
+    <div class="notice">
+      <p class="en">Some visual assets — boss portraits in particular — were created with the assistance of generative AI tools, then refined and finalised by the developer. This is disclosed on the Steam store page as well, and is stated here so that outlets with an AI-content policy can make an informed decision before covering the game.</p>
+      <p class="ko">일부 시각 자산, 특히 보스 초상화는 생성형 AI 도구의 도움을 받아 제작한 뒤 개발자가 다듬어 완성했다. 스팀 스토어 페이지에도 동일하게 고지되어 있으며, AI 콘텐츠 관련 정책이 있는 매체가 사전에 판단할 수 있도록 여기에도 명시한다.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow"><span class="pip">&spades;</span> <span class="en">Contact &amp; Links</span><span class="ko">연락처 및 링크</span></p>
+    <h2><span class="en">Review keys on request</span><span class="ko">리뷰 키 요청</span></h2>
+    <p class="lead" style="margin-top:14px">
+      <span class="en">Write from a channel or outlet address and include a link to your channel or publication. Keys usually go out the same day.</span>
+      <span class="ko">채널이나 매체 주소로 연락하면서 채널·매체 링크를 함께 보내주면 된다. 대개 같은 날 발송한다.</span>
+    </p>
+    <p style="font-family:'Bodoni Moda',serif;font-size:26px;margin-top:20px">
+      <a href="mailto:drgby@ganaholdings.com">drgby@ganaholdings.com</a>
+    </p>
+
+    <ul class="links">
+      <li><span class="k">Steam</span><a href="https://store.steampowered.com/app/4962850/Jokers_Last_Call/" target="_blank" rel="noopener">store.steampowered.com/app/4962850</a></li>
+      <li><span class="k">Trailer</span><a href="https://youtu.be/LAbl3kCWED8" target="_blank" rel="noopener">youtu.be/LAbl3kCWED8</a></li>
+      <li><span class="k">YouTube</span><a href="https://www.youtube.com/@EyeDoctorCodes" target="_blank" rel="noopener">@EyeDoctorCodes</a></li>
+      <li><span class="k"><span class="en">Company</span><span class="ko">회사</span></span><a href="https://www.fullform.page/home" target="_blank" rel="noopener">Gana Holdings</a></li>
+      <li><span class="k">App Store</span><a href="https://apps.apple.com/us/developer/byoungyoung-gu/id1185306041" target="_blank" rel="noopener"><span class="en">Developer catalogue</span><span class="ko">개발자 전체 앱</span></a></li>
+      <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/byoungyoung-gu-309156235" target="_blank" rel="noopener">Byoungyoung Gu</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Gana Holdings Co., Ltd. <span class="en">All rights reserved.</span><span class="ko">All rights reserved.</span></span>
+    <span class="muted"><span class="en">Press kit last updated</span><span class="ko">최종 갱신</span> · 2026-08-05</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var body = document.body, btn = document.getElementById('langbtn');
+  function setLang(l){
+    body.dataset.lang = l;
+    document.documentElement.lang = l;
+    btn.textContent = (l === 'en') ? '한국어' : 'English';
+    try { localStorage.setItem('jlc-lang', l); } catch(e){}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('jlc-lang'); } catch(e){}
+  setLang(saved || ((navigator.language || '').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en'));
+  btn.addEventListener('click', function(){ setLang(body.dataset.lang === 'en' ? 'ko' : 'en'); });
+
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){
+        x.setAttribute('aria-selected', String(x === t));
+        document.getElementById('g-' + x.dataset.t).hidden = (x !== t);
+      });
+    });
+  });
+
+  document.querySelectorAll('.copybtn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var txt = b.closest('.copyblock').querySelector('.ct').innerText;
+      navigator.clipboard.writeText(txt).then(function(){
+        var old = b.textContent; b.textContent = 'Copied';
+        setTimeout(function(){ b.textContent = old; }, 1600);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
